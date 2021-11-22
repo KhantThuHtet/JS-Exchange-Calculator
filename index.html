@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Exchange Calculator</title>
+    <meta name="title" content="Exchange Calculator" />
+    <meta name="description" content="Exchange service." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/KhantThuHtet" />
+    <meta property="og:title" content="Exchange Calculator" />
+    <meta property="og:description" content="Exchange service." />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://github.com/KhantThuHtet" />
+    <meta property="twitter:title" content="Exchange Calculator" />
+    <meta property="twitter:description" content="Exchange service." />
+    
+    <title>Exchange Calcultor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/darkmode.css" />
+    <link rel="shortcut icon" href="./assets/Asset 8.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+  <body>
+
+    <section class="container animate__animated animate__fadeInDown">
+
+        <div class="upper-section">
+
+            <div class="brand-container">
+                <div class="brand-logo">
+                    <img src="./assets/Asset 8.png" alt="">
+                </div>
+                <div class="brand-name">MMEx</div>
+            </div>
+
+            <div class="result-container">
+                0.00
+            </div>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <form class="input-section">
+
+            <div class="input-box input-container">
+                <label>Input</label>
+                <input type="number" class="inputBox" value="10" autofocus required min="1">
+            </div>
+
+            <div class="from-box input-container">
+                <label>From</label>
+                <select id="selectBox" class="fromSelectBox" required>
+                    <option value="" selected disabled>Select Currency</option>
+                </select>
+            </div>
+
+            <div class="to-box input-container">
+                <label>To</label>
+                <select id="selectBox" class="toSelectBox" required>
+                </select>
+            </div>
+
+            <div class="calculation-btn">
+                <button type="submit" class="calc-btn">Calculate</button>
+            </div>
+
+        </form>  
+
+        <div class="record-table">
+            <table>
+                <thead class="record-heading">
+                </thead>
+                <tbody class="record-history">
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <div class="mode-change">
+        
+    <svg class="night animate__animated animate__bounceIn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 64 80" enable-background="new 0 0 64 64" xml:space="preserve"><path d="M40,39c-8.3,0-15-6.7-15-15c0-2.1,0.4-4,1.2-5.8C20.8,20.4,17,25.8,17,32c0,8.3,6.7,15,15,15c6.2,0,11.6-3.8,13.8-9.2  C44,38.6,42.1,39,40,39z"/><polygon points="38.3,21.8 41.5,21.7 39.6,24.4 40.7,27.5 37.6,26.5 35,28.5 35,25.2 32.3,23.4 35.4,22.3 36.3,19.2 "/></svg>
+
+
+    
+<svg class="day hide animate__animated animate__bounceIn" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="0 0 100 125" version="1.1" x="0px" y="0px"><g transform="translate(0,-952.36218)"><path d="m 37.710379,991.36239 a 14.240611,14.240611 0 0 0 -14.11731,12.47351 15.98487,15.98487 0 0 0 -0.78773,-0.04 15.98487,15.98487 0 0 0 -15.9851901,15.9851 15.98487,15.98487 0 0 0 15.9851901,15.9848 15.98487,15.98487 0 0 0 7.78218,-2.0441 11.87582,10.179274 0 0 0 9.00948,3.5661 11.87582,10.179274 0 0 0 6.23391,-1.524 17.961697,17.961697 0 0 0 8.84499,2.3422 17.961697,17.961697 0 0 0 17.96178,-17.9618 17.961697,17.961697 0 0 0 -17.96178,-17.9612 17.961697,17.961697 0 0 0 -3.09563,0.2703 14.240611,14.240611 0 0 0 -13.86989,-11.09151 z" style="opacity:1;fill:none;fill-opacity:1;stroke:#FCCE5D;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="m 62.409059,964.11829 0,9.68 0,-9.68 z" style="opacity:1;fill:none;fill-opacity:1;stroke:#FCCE5D;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="m 38.882139,973.86379 6.84318,6.8447 -6.84318,-6.8447 z" style="opacity:1;fill:none;fill-opacity:1;stroke:#FCCE5D;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="m 85.934409,973.86379 -6.84317,6.8447 6.84317,-6.8447 z" style="opacity:1;fill:none;fill-opacity:1;stroke:#FCCE5D;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="m 71.055129,1012.7292 c 5.4568,-3.0011 8.99842,-8.671 8.99834,-15.33851 10e-5,-9.745 -7.89938,-17.6452 -17.64441,-17.646 -8.3555,-10e-5 -15.35464,5.8072 -17.18133,13.6057" style="opacity:1;fill:none;fill-opacity:1;stroke:#FCCE5D;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="m 86.001479,997.39069 9.67837,0 -9.67837,0 z" style="opacity:1;fill:none;fill-opacity:1;stroke:#FCCE5D;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="m 79.091239,1014.073 6.84317,6.8444 -6.84317,-6.8444 z" style="opacity:1;fill:none;fill-opacity:1;stroke:#FCCE5D;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/></g></svg>
+    </div>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: #FCCE5D;
+    --text-gray: #707070;
+    --secondary: #EEEEEE;
+    --secondary-text: #685933;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+
+
+.container{
+    width: 800px;
+    min-height: 70vh;
+    padding: 10px;
+    margin: 100px auto;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+.upper-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.brand-container{
+    font-size: 34px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.brand-container img{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+.result-container{
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.divider{
+    width: 100%;
+    height: 5px;
+    background-color: var(--text-gray);
+    margin: 20px 0 25px 0;
+    border-radius: 10px;
+}
+
+.input-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.input-section label{
+    font-size: 20px;
+}
+
+.input-container{
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.inputBox, #selectBox{
+    width: 170px;
+    height: 30px;
+    margin-top: 10px;
+    padding: 0 10px;
+    border: 1px solid var(--text-gray);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.inputBox{
+    text-align: right;
+    font-size: 16px;
+}
+
+.calculation-btn{
+    flex-grow: 2;
+    width: 200px;
+    height: 70px;
+}
+.calc-btn{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: var(--primary);
+    border-radius: 6px;
+    color: var(--secondary-text);
+    font-size: 19px;
+    font-weight: 600;
+}
+.calc-btn:active{
+    background-color: #f5c54d;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+.inputBox:focus{
+    outline: none;
+}
+select:focus{
+    outline: none;
+}
+
+.record-table{
+    margin-top: 40px;
+}
+.record-table table{
+    width: 100%;
+    border-collapse: collapse;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.record-table td, .record-table thead td {
+  border-right: 1px solid var(--text-gray);
+  padding: 10px;
+}
+.record-table td:last-child, .record-table thead td:last-child{
+    border: none;
+}
+.record-table table thead td:first-child{
+    border-radius: 5px 0 0 0;
+}
+.record-table table thead td:last-child{
+    border-radius: 0 5px 0 0;
+}
+.record-table tr:nth-child(even){background-color: #f3f3f3;}
+.record-table tr:nth-child(odd){background-color: #fff;}
+
+.record-table tr:hover {background-color: #ddd;}
+
+.record-table thead td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--primary);
+  color: var(--text-gray);
+  z-index: 3;
+}
+.record-table thead td:last-child{
+    text-align: right;
+}
+.record-heading{
+    margin-bottom: 50px;
+}
+.record-table tbody td:last-child{
+    text-align: right;
+}
+.record-table tbody tr{
+    z-index: 10;
+}
+
+.mode-change{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(114, 107, 107);
+    padding: 3px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.mode-change svg{
+    fill: var(--primary);
+}
+
+.hide{
+    display: none;
+}
+
+
+@media screen and (max-width: 480px) {
+    .container{
+        width: 100%;
+        padding: 0 10px;
+        margin: 30px auto;
+    }
+    .upper-section{
+        flex-flow: column;
+        align-items: flex-end;
+    }
+    .brand-container{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    /**************************/
+    .input-section{
+        flex-wrap: wrap;
+    }
+    .input-box .inputBox{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .from-box{
+        margin-bottom: 15px;
+        width: 45%;
+    }
+    .to-box{
+        margin-bottom: 15px;
+        width: 45%;
+    }
+    .calculation-btn{
+        width: 100%;
+    }
+    .record-history{
+        font-size: 11px;
+    }
+    .mode-change{
+        bottom: 35px;
+        right: 30px;
+    }
+}

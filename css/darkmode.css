@@ -1,0 +1,24 @@
+:root{
+    --primary: #FCCE5D;
+    --bg: #212121;
+    --text: #EDF6F9;
+}
+
+.night-mode .mode-change{
+    padding: 10px;
+    color: var(--primary);
+}
+
+.night-mode{
+    background-color: var(--bg);
+}
+.night-mode .upper-section{
+    color: var(--text);
+}
+.night-mode .input-section{
+    color: var(--text);
+}
+
+.night-mode .input-section .inputBox,.night-mode .input-section .fromSelectBox, .night-mode .input-section .toSelectBox{
+    background: var(--text);
+}
