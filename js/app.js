@@ -62,7 +62,7 @@ function AddRecordHistory(inputValue, result){
     createTableRowAndData(recordArr, recordHistory);
 
     // Check Localstorage
-    if (localStorage.length > 0) {
+    if (localStorage.getItem('record')) {
       let recordFromStorage = JSON.parse(localStorage.getItem("record"));
       recordFromStorage[recordFromStorage.length] = recordArr[0];
       return localStorage.setItem("record", JSON.stringify(recordFromStorage));
@@ -98,7 +98,7 @@ function createTableRowAndData(tagArr, tagName){
 }
 
 function showRecordFromStorage(){
-    if (localStorage.length == 0) {
+    if (!localStorage.getItem('record')) {
         return;
     }
     let recordFromStorage = JSON.parse(localStorage.getItem("record"));
@@ -116,7 +116,30 @@ function showRecordFromStorage(){
 }
 
 modeChange.addEventListener('click', ()=>{
-    document.getElementsByTagName('body')[0].classList.toggle('night-mode');
-    document.getElementsByClassName('night')[0].classList.toggle('hide');
-    document.getElementsByClassName('day')[0].classList.toggle('hide');
+    let mode = localStorage.getItem('mode');
+    if (mode === 'night') {
+        localStorage.setItem("mode", "day");
+        document.getElementsByTagName("body")[0].classList.toggle("night-mode");
+        document.getElementsByClassName("night")[0].classList.toggle("hide");
+        document.getElementsByClassName("day")[0].classList.toggle("hide");
+    } else {
+        document.getElementsByTagName("body")[0].classList.toggle("night-mode");
+        document.getElementsByClassName("night")[0].classList.toggle("hide");
+        document.getElementsByClassName("day")[0].classList.toggle("hide");
+        localStorage.setItem("mode", "night");
+    }
+    
 });
+
+(()=>{
+    let mode = localStorage.getItem("mode");
+    if (mode === "night") {
+      document.getElementsByTagName("body")[0].classList.add("night-mode");
+      document.getElementsByClassName("night")[0].classList.remove("hide");
+      document.getElementsByClassName("day")[0].classList.add("hide");
+    } else {
+      document.getElementsByTagName("body")[0].classList.remove("night-mode");
+      document.getElementsByClassName("night")[0].classList.addd("hide");
+      document.getElementsByClassName("day")[0].classList.remove("hide");
+    }
+})();

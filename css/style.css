@@ -13,6 +13,7 @@
 }
 body{
     font-family: 'Rubik', sans-serif;
+    transition: all 0.3s ease-in-out;
 }
 
 
@@ -212,16 +213,24 @@ select:focus{
         flex-wrap: wrap;
     }
     .input-box .inputBox{
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         width: 100%;
+
     }
     .from-box{
         margin-bottom: 15px;
         width: 45%;
     }
+    .fromSelectBox{
+        height: 35px !important;
+    }
+    
     .to-box{
         margin-bottom: 15px;
         width: 45%;
+    }
+    .toSelectBox{
+        height: 35px !important;
     }
     .calculation-btn{
         width: 100%;
